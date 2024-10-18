@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amateur Radio Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f7f9; /* Pale background color */
+        }
+        .navbar-brand i {
+            margin-right: 8px;
+        }
+        .nav-link i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-broadcast-tower"></i> Amateur Radio Information
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="solarActivityAndHFPropagation.html">
+                            <i class="fas fa-sun"></i> Solar Activity & HF Propagation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="propagation.html">
+                            <i class="fas fa-wave-square"></i> Propagation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bandPlan.html">
+                            <i class="fas fa-signal"></i> Band Plan
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="antennaTuningGuide.html">
+                            <i class="fas fa-wifi"></i> Antenna Tuning Guide
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SDRApplications.html">
+                            <i class="fas fa-broadcast-tower"></i> SDR Applications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="EMFComplianceTable.html">
+                            <i class="fas fa-table"></i> EMF Compliance Table
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="DigitalVoiceModes.html">
+                            <i class="fas fa-voicemail"></i> Digital Voice Modes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="DigitalModeFrequenciesAndTools.html">
+                            <i class="fas fa-tools"></i> Digital Mode Frequencies & Tools
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+<div class="container my-4">
+    <h2 class="text-center">SDR Applications</h2>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Application</th>
+            <th>Frequency Range (MHz)</th>
+            <th>Common Software/Tools</th>
+            <th>Typical Use</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>TinyGS (Ground Station)</td>
+            <td>UHF (435-438 MHz), VHF (137 MHz)</td>
+            <td><a href="https://tinygs.com/" target="_blank">TinyGS Network</a></td>
+            <td>Satellite communication, telemetry, and data decoding</td>
+        </tr>
+        <tr>
+            <td>APRS (Automatic Packet Reporting System)</td>
+            <td>144.390 MHz (VHF)</td>
+            <td><a href="https://aprs.fi/" target="_blank">APRS.fi</a>, Direwolf</td>
+            <td>Position tracking, messaging, and weather data</td>
+        </tr>
+        <tr>
+            <td>ADS-B (Automatic Dependent Surveillance-Broadcast)</td>
+            <td>1090 MHz</td>
+            <td><a href="https://flightaware.com/adsb/piaware/" target="_blank">PiAware</a>, Dump1090</td>
+            <td>Aircraft tracking and flight data</td>
+        </tr>
+        <tr>
+            <td>Weather Fax</td>
+            <td>3.885, 4.675, 8.682 MHz (HF)</td>
+            <td><a href="https://xmit.github.io/" target="_blank">Fldigi</a>, MultiPSK</td>
+            <td>Receive and decode weather maps from HF radio transmissions</td>
+        </tr>
+        <tr>
+            <td>NOAA Weather Satellites</td>
+            <td>137-138 MHz</td>
+            <td><a href="https://wxtoimgrestored.xyz/" target="_blank">WXtoImg</a></td>
+            <td>Receive weather images from NOAA satellites</td>
+        </tr>
+        <tr>
+            <td>Pager Decoding (POCSAG)</td>
+            <td>137-165 MHz</td>
+            <td>PDW, Multimon-ng</td>
+            <td>Receive and decode pager transmissions</td>
+        </tr>
+        <tr>
+            <td>Marine AIS (Automatic Identification System)</td>
+            <td>161.975, 162.025 MHz</td>
+            <td><a href="https://www.shipais.com/" target="_blank">ShipAIS</a></td>
+            <td>Track maritime vessel positions</td>
+        </tr>
+        <tr>
+            <td>FM Radio (Broadcast Receiver)</td>
+            <td>88-108 MHz</td>
+            <td>SDR# (SDRSharp), GQRX</td>
+            <td>Listen to FM radio broadcasts</td>
+        </tr>
+        <tr>
+            <td>Amateur Radio (CW, SSB, etc.)</td>
+            <td>Varies (HF, VHF, UHF)</td>
+            <td><a href="https://gqrx.dk/" target="_blank">GQRX</a>, SDR#</td>
+            <td>Listen and decode ham radio transmissions</td>
+        </tr>
+        <tr>
+            <td>Satellite Beacon Monitoring</td>
+            <td>137-440 MHz (varies)</td>
+            <td>GQRX, Orbitron</td>
+            <td>Track and monitor satellite beacon signals</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

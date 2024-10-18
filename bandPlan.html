@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amateur Radio Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f7f9; /* Pale background color */
+        }
+        .navbar-brand i {
+            margin-right: 8px;
+        }
+        .nav-link i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-broadcast-tower"></i> Amateur Radio Information
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="solarActivityAndHFPropagation.html">
+                            <i class="fas fa-sun"></i> Solar Activity & HF Propagation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="propagation.html">
+                            <i class="fas fa-wave-square"></i> Propagation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bandPlan.html">
+                            <i class="fas fa-signal"></i> Band Plan
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="antennaTuningGuide.html">
+                            <i class="fas fa-wifi"></i> Antenna Tuning Guide
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SDRApplications.html">
+                            <i class="fas fa-broadcast-tower"></i> SDR Applications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="EMFComplianceTable.html">
+                            <i class="fas fa-table"></i> EMF Compliance Table
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="DigitalVoiceModes.html">
+                            <i class="fas fa-voicemail"></i> Digital Voice Modes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="DigitalModeFrequenciesAndTools.html">
+                            <i class="fas fa-tools"></i> Digital Mode Frequencies & Tools
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content --> 
+<div class="container my-4">
+    <h2 class="text-center">UK Amateur Radio Band Plan</h2>
+    
+    <h3>Foundation Licence</h3>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Band</th>
+            <th>Band Range (MHz)</th>
+            <th>Power Limit</th>
+            <th>Allowed Modes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>160m</td>
+            <td>1.8 - 2.0</td>
+            <td>10W</td>
+            <td>SSB, CW, FM, Digital</td>
+        </tr>
+        <tr>
+            <td>80m</td>
+            <td>3.5 - 3.8</td>
+            <td>10W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>60m</td>
+            <td>5.275 - 5.450</td>
+            <td>10W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>40m</td>
+            <td>7.0 - 7.2</td>
+            <td>10W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>20m</td>
+            <td>14.070 - 14.350</td>
+            <td>10W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>10m</td>
+            <td>28.0 - 29.7</td>
+            <td>10W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>2m</td>
+            <td>144.0 - 146.0</td>
+            <td>10W</td>
+            <td>SSB, CW, FM, Digital</td>
+        </tr>
+        <tr>
+            <td>70cm</td>
+            <td>430.0 - 440.0</td>
+            <td>10W</td>
+            <td>SSB, CW, FM, Digital</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3>Intermediate Licence</h3>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Band</th>
+            <th>Band Range (MHz)</th>
+            <th>Power Limit</th>
+            <th>Allowed Modes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>160m</td>
+            <td>1.8 - 2.0</td>
+            <td>50W</td>
+            <td>SSB, CW, FM, Digital</td>
+        </tr>
+        <tr>
+            <td>80m</td>
+            <td>3.5 - 3.8</td>
+            <td>50W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>60m</td>
+            <td>5.275 - 5.450</td>
+            <td>50W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>40m</td>
+            <td>7.0 - 7.2</td>
+            <td>50W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>20m</td>
+            <td>14.070 - 14.350</td>
+            <td>50W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>10m</td>
+            <td>28.0 - 29.7</td>
+            <td>50W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>2m</td>
+            <td>144.0 - 146.0</td>
+            <td>50W</td>
+            <td>SSB, CW, FM, Digital</td>
+        </tr>
+        <tr>
+            <td>70cm</td>
+            <td>430.0 - 440.0</td>
+            <td>50W</td>
+            <td>SSB, CW, FM, Digital</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3>Full Licence</h3>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Band</th>
+            <th>Band Range (MHz)</th>
+            <th>Power Limit</th>
+            <th>Allowed Modes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>160m</td>
+            <td>1.8 - 2.0</td>
+            <td>400W</td>
+            <td>SSB, CW, FM, Digital</td>
+        </tr>
+        <tr>
+            <td>80m</td>
+            <td>3.5 - 3.8</td>
+            <td>400W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>60m</td>
+            <td>5.275 - 5.450</td>
+            <td>400W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>40m</td>
+            <td>7.0 - 7.2</td>
+            <td>400W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>20m</td>
+            <td>14.070 - 14.350</td>
+            <td>400W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>10m</td>
+            <td>28.0 - 29.7</td>
+            <td>400W</td>
+            <td>SSB, CW, Digital</td>
+        </tr>
+        <tr>
+            <td>2m</td>
+            <td>144.0 - 146.0</td>
+            <td>400W</td>
+            <td>SSB, CW, FM, Digital</td>
+        </tr>
+        <tr>
+            <td>70cm</td>
+            <td>430.0 - 440.0</td>
+            <td>400W</td>
+            <td>SSB, CW, FM, Digital</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
