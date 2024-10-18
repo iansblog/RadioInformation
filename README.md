@@ -30,6 +30,11 @@ or runing
 - docker rm amateurradioinformation
 - docker run -d --name amateurradioinformation --restart always -p 80:80 neonsunset/amateurradioinformation:latest
 
+docker stop amateurradioinformation
+docker rm amateurradioinformation
+docker run -d --name amateurradioinformation --restart always -p 80:9000 neonsunset/amateurradioinformation:latest
+
+
 Please change the port as needed. 
 
 ## Docker Hub Location
