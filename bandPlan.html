@@ -1,274 +1,1022 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amateur Radio Information</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f4f7f9; /* Pale background color */
-        }
-        .navbar-brand i {
-            margin-right: 8px;
-        }
-        .nav-link i {
-            margin-right: 5px;
-        }
-    </style>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Amateur Radio Information</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<style>
+			body {
+				background-color: #f4f7f9; /* Pale background color */
+			}
+			.navbar-brand i {
+				margin-right: 8px;
+			}
+			.nav-link i {
+				margin-right: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation bar -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<i class="fas fa-broadcast-tower"></i> Amateur Radio Information
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="solarActivityAndHFPropagation.html">
+								<i class="fas fa-sun"></i> Solar Activity & HF Propagation
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="propagation.html">
+								<i class="fas fa-wave-square"></i> Propagation
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="bandPlan.html">
+								<i class="fas fa-signal"></i> Band Plan
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="antennaTuningGuide.html">
+								<i class="fas fa-wifi"></i> Antenna Tuning Guide
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="SDRApplications.html">
+								<i class="fas fa-broadcast-tower"></i> SDR Applications
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="EMFComplianceTable.html">
+								<i class="fas fa-table"></i> EMF Compliance Table
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="DigitalVoiceModes.html">
+								<i class="fas fa-voicemail"></i> Digital Voice Modes
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="DigitalModeFrequenciesAndTools.html">
+								<i class="fas fa-tools"></i> Digital Mode Frequencies & Tools
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-broadcast-tower"></i> Amateur Radio Information
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="solarActivityAndHFPropagation.html">
-                            <i class="fas fa-sun"></i> Solar Activity & HF Propagation
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="propagation.html">
-                            <i class="fas fa-wave-square"></i> Propagation
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bandPlan.html">
-                            <i class="fas fa-signal"></i> Band Plan
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="antennaTuningGuide.html">
-                            <i class="fas fa-wifi"></i> Antenna Tuning Guide
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="SDRApplications.html">
-                            <i class="fas fa-broadcast-tower"></i> SDR Applications
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="EMFComplianceTable.html">
-                            <i class="fas fa-table"></i> EMF Compliance Table
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="DigitalVoiceModes.html">
-                            <i class="fas fa-voicemail"></i> Digital Voice Modes
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="DigitalModeFrequenciesAndTools.html">
-                            <i class="fas fa-tools"></i> Digital Mode Frequencies & Tools
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+		<!-- Main content -->
+		<div class="container my-4">
+			<h2 class="text-center">UK Amateur Radio Band Plan</h2>
 
-    <!-- Main content --> 
-<div class="container my-4">
-    <h2 class="text-center">UK Amateur Radio Band Plan</h2>
-    <h3 class="text-center" style="color: red;">October 2024 - This table is not valid, it is a starting point and needs work, if you want to help out please reach out.</h3>
+			<div class="container mt-5">
+				<h2>Table A: Foundation Licence Parameters</h2>
+				<table class="table table-bordered table-striped">
+					<thead class="thead-light">
+						<tr>
+							<th>Band</th>
+							<th>Frequency Bands</th>
+							<th>Status of Amateur Service Allocation</th>
+							<th>Status of Amateur Satellite Service Allocation</th>
+							<th>Maximum Peak Envelope Power (Watts and dBW)</th>
+							<th>Modes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2200m</td>
+							<td>135.7 to 137.8 kHz</td>
+							<td>
+								Secondary. Available on the basis of non-interference to other
+								services.
+							</td>
+							<td>Not allocated</td>
+							<td>1 W (0 dBW) ERP</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>160m</td>
+							<td>1810 to 1830 kHz</td>
+							<td>
+								Primary. Available on the basis of non-interference to other
+								services outside the UK or Crown Dependencies.
+							</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>160m</td>
+							<td>1830 to 1850 kHz</td>
+							<td>Primary</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>160m</td>
+							<td>1850 to 2000 kHz</td>
+							<td>
+								Secondary. Available on the basis of non-interference to other
+								services.
+							</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>80m</td>
+							<td>3500 to 3800 kHz</td>
+							<td>Primary. Shared with other services.</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>40m</td>
+							<td>7000 to 7100 kHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>40m</td>
+							<td>7100 to 7200 kHz</td>
+							<td>Primary</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>30m</td>
+							<td>10000 to 10150 kHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW)</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>20m</td>
+							<td>14000 to 14250 kHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>20m</td>
+							<td>14250 to 14350 kHz</td>
+							<td>Primary</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>17m</td>
+							<td>18068 to 18168 kHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>15m</td>
+							<td>21000 to 21450 kHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>12m</td>
+							<td>24890 to 24990 kHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>10m</td>
+							<td>28.0 to 29.7 MHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>6m</td>
+							<td>50 to 51 MHz</td>
+							<td>
+								Primary. Available on the basis of non-interference to other
+								services outside the UK or Crown Dependencies.
+							</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>6m</td>
+							<td>51 to 52 MHz</td>
+							<td>
+								Secondary. Available on the basis of non-interference to other
+								services.
+							</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW)</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>4m</td>
+							<td>70.0 to 70.5 MHz</td>
+							<td>
+								Secondary. Available on the basis of non-interference to other
+								services.
+							</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>2m</td>
+							<td>144 to 146 MHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>70cm</td>
+							<td>430 to 431 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW) ERP</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>70cm</td>
+							<td>431 to 432 MHz</td>
+							<td>
+								Secondary. Not available for use within 100km radius of Charing
+								Cross, London (51°30’30’’N, 00°07’24’’W).
+							</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW) ERP</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>70cm</td>
+							<td>432 to 435 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>25 W (13.98 dBW)</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 
-    
-    <h3>Foundation Licence</h3>
-    <table class="table table-bordered table-hover table-striped">
-        <thead>
-        <tr>
-            <th>Band</th>
-            <th>Band Range (MHz)</th>
-            <th>Power Limit</th>
-            <th>Allowed Modes</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>160m</td>
-            <td>1.8 - 2.0</td>
-            <td>10W</td>
-            <td>SSB, CW, FM, Digital</td>
-        </tr>
-        <tr>
-            <td>80m</td>
-            <td>3.5 - 3.8</td>
-            <td>10W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>60m</td>
-            <td>5.275 - 5.450</td>
-            <td>10W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>40m</td>
-            <td>7.0 - 7.2</td>
-            <td>10W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>20m</td>
-            <td>14.070 - 14.350</td>
-            <td>10W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>10m</td>
-            <td>28.0 - 29.7</td>
-            <td>10W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>2m</td>
-            <td>144.0 - 146.0</td>
-            <td>10W</td>
-            <td>SSB, CW, FM, Digital</td>
-        </tr>
-        <tr>
-            <td>70cm</td>
-            <td>430.0 - 440.0</td>
-            <td>10W</td>
-            <td>SSB, CW, FM, Digital</td>
-        </tr>
-        </tbody>
-    </table>
+			<div class="container mt-5">
+				<h2>Table B: Intermediate Licence Parameters</h2>
+				<table class="table table-bordered table-striped">
+					<thead class="thead-light">
+						<tr>
+							<th>Band</th>
+							<th>Frequency Bands</th>
+							<th>Status of Amateur Service Allocation under this Licence</th>
+							<th>
+								Status of Amateur Satellite Service Allocation under this
+								Licence
+							</th>
+							<th>
+								Maximum Peak Envelope Power Level in Watts (and dB relative to 1
+								Watt)
+							</th>
+							<th>Modes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Low Frequency</td>
+							<td>135.7 to 137.8 kHz</td>
+							<td>
+								Secondary. Available on the basis of non-interference to other
+								services.
+							</td>
+							<td>Not allocated</td>
+							<td>1 W (0 dBW) ERP</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>160m</td>
+							<td>1810 to 1830 kHz</td>
+							<td>
+								Primary. Available on the basis of non-interference to other
+								services outside the UK or Crown Dependencies.
+							</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>160m</td>
+							<td>1830 to 1850 kHz</td>
+							<td>Primary</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>160m</td>
+							<td>1850 to 2000 kHz</td>
+							<td>
+								Secondary. Available on the basis of non-interference to other
+								services.
+							</td>
+							<td>Not allocated</td>
+							<td>32 W (15 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>80m</td>
+							<td>3500 to 3800 kHz</td>
+							<td>Primary. Shared with other Services.</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>40m</td>
+							<td>7000 to 7100 kHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>40m</td>
+							<td>7100 to 7200 kHz</td>
+							<td>Primary</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>30m</td>
+							<td>10000 to 10150 kHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW)</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>20m</td>
+							<td>14000 to 14250 kHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>20m</td>
+							<td>14250 to 14350 kHz</td>
+							<td>Primary</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>17m</td>
+							<td>18068 to 18168 kHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>15m</td>
+							<td>21000 to 21450 kHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>12m</td>
+							<td>24890 to 24990 kHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>10m</td>
+							<td>28.0 to 29.7 MHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>6m</td>
+							<td>50 to 51 MHz</td>
+							<td>
+								Primary. Available on the basis of non-interference to other
+								services outside the UK or Crown Dependencies.
+							</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>6m</td>
+							<td>51 to 52 MHz</td>
+							<td>
+								Secondary. Available on the basis of non-interference to other
+								services.
+							</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW)</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>4m</td>
+							<td>70.0 to 70.5 MHz</td>
+							<td>
+								Secondary. Available on the basis of non-interference to other
+								services.
+							</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>2m</td>
+							<td>144 to 146 MHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="DigitalModeFrequenciesAndTools.html"
+									target="_DigitalModes"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>70cm</td>
+							<td>430 to 431 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>40 W (16 dBW) ERP</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>70cm</td>
+							<td>431 to 432 MHz</td>
+							<td>
+								Secondary. Not available for use within 100km radius of Charing
+								Cross, London (51°30’30’’N, 00°07’24’’W).
+							</td>
+							<td>Not allocated</td>
+							<td>40 W (16 dBW) ERP</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>70cm</td>
+							<td>432 to 435 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>70cm</td>
+							<td>435 to 438 MHz</td>
+							<td>Secondary</td>
+							<td>Secondary</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>70cm</td>
+							<td>438 to 440 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>23cm</td>
+							<td>1240 to 1260 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>23cm</td>
+							<td>1260 to 1270 MHz</td>
+							<td>Secondary</td>
+							<td>Secondary. Earth to space only</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>23cm</td>
+							<td>1270 to 1325 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>13cm</td>
+							<td>2310 to 2350 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>13cm</td>
+							<td>2350 to 2400 MHz</td>
+							<td>Secondary. Primary for Earth to space.</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>9cm</td>
+							<td>3400 to 3500 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>5cm</td>
+							<td>5650 to 5850 MHz</td>
+							<td>Secondary. Primary for Earth to space.</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 
-    <h3>Intermediate Licence</h3>
-    <table class="table table-bordered table-hover table-striped">
-        <thead>
-        <tr>
-            <th>Band</th>
-            <th>Band Range (MHz)</th>
-            <th>Power Limit</th>
-            <th>Allowed Modes</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>160m</td>
-            <td>1.8 - 2.0</td>
-            <td>50W</td>
-            <td>SSB, CW, FM, Digital</td>
-        </tr>
-        <tr>
-            <td>80m</td>
-            <td>3.5 - 3.8</td>
-            <td>50W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>60m</td>
-            <td>5.275 - 5.450</td>
-            <td>50W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>40m</td>
-            <td>7.0 - 7.2</td>
-            <td>50W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>20m</td>
-            <td>14.070 - 14.350</td>
-            <td>50W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>10m</td>
-            <td>28.0 - 29.7</td>
-            <td>50W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>2m</td>
-            <td>144.0 - 146.0</td>
-            <td>50W</td>
-            <td>SSB, CW, FM, Digital</td>
-        </tr>
-        <tr>
-            <td>70cm</td>
-            <td>430.0 - 440.0</td>
-            <td>50W</td>
-            <td>SSB, CW, FM, Digital</td>
-        </tr>
-        </tbody>
-    </table>
+			<div class="container mt-5">
+				<h2>Table C: Full Licence Parameters</h2>
+				<table class="table table-bordered table-striped">
+					<thead class="thead-light">
+						<tr>
+							<th>Band</th>
+							<th>Frequency Bands</th>
+							<th>Status of Amateur Service allocation under this licence</th>
+							<th>
+								Status of Amateur Satellite Service allocation under this
+								licence
+							</th>
+							<th>
+								Maximum Peak Envelope Power level in Watts (and dB relative to 1
+								Watt)
+							</th>
+							<th>Modes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>135 kHz</td>
+							<td>135.7 to 137.8 kHz</td>
+							<td>
+								Secondary. Available on the basis of non-interference to other
+								services.
+							</td>
+							<td>Not allocated</td>
+							<td>1 W (0 dBW) ERP</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>472 kHz</td>
+							<td>472 to 479 kHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>5 W (7 dBW) EIRP</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>160 m</td>
+							<td>1810 to 1830 kHz</td>
+							<td>
+								Primary. Available on the basis of non-interference to other
+								services outside the UK or Crown Dependencies.
+							</td>
+							<td>Not allocated</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>160 m</td>
+							<td>1830 to 1850 kHz</td>
+							<td>Primary</td>
+							<td>Not allocated</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>160 m</td>
+							<td>1850 to 2000 kHz</td>
+							<td>
+								Secondary. Available on the basis of non-interference to other
+								services.
+							</td>
+							<td>Not allocated</td>
+							<td>32 W (15 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>80 m</td>
+							<td>3500 to 3800 kHz</td>
+							<td>Primary. Shared with other Services.</td>
+							<td>Not allocated</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>60 m</td>
+							<td>5258.5 to 5264 kHz</td>
+							<td>
+								Secondary. Subject to restrictions set out in note (g).
+								Available on the basis of non-interference to other services
+								inside the UK or Crown Dependencies.
+							</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW) but not exceeding 200 W EIRP</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>40 m</td>
+							<td>7000 to 7100 kHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>40 m</td>
+							<td>7100 to 7200 kHz</td>
+							<td>Primary</td>
+							<td>Not allocated</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>30 m</td>
+							<td>10.10 to 10.15 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>400 W (26 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>20 m</td>
+							<td>14.00 to 14.25 MHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>20 m</td>
+							<td>14.25 to 14.35 MHz</td>
+							<td>Primary</td>
+							<td>Not allocated</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="_DigitalModes"
+									target="DigitalModeFrequenciesAndTools.html"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>17 m</td>
+							<td>18.068 to 18.168 MHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>15 m</td>
+							<td>21.00 to 21.45 MHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>12 m</td>
+							<td>24.89 to 24.99 MHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>10 m</td>
+							<td>28.0 to 29.7 MHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>6 m</td>
+							<td>50 to 51 MHz</td>
+							<td>
+								Primary. Available on the basis of non-interference to other
+								services outside the UK or Crown Dependencies.
+							</td>
+							<td>Not allocated</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>6 m</td>
+							<td>51 to 52 MHz</td>
+							<td>
+								Secondary. Available on the basis of non-interference to other
+								services.
+							</td>
+							<td>Not allocated</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>4 m</td>
+							<td>70.0 to 70.5 MHz</td>
+							<td>
+								Secondary. Available on the basis of non-interference to other
+								services.
+							</td>
+							<td>Not allocated</td>
+							<td>160 W (22 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>2 m</td>
+							<td>144 to 146 MHz</td>
+							<td>Primary</td>
+							<td>Primary</td>
+							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
+							<td>
+								<a
+									href="_DigitalModes"
+									target="DigitalModeFrequenciesAndTools.html"
+									>Digital</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>70 cm</td>
+							<td>430 to 431 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>40 W (16 dBW) ERP</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>70 cm</td>
+							<td>431 to 432 MHz</td>
+							<td>
+								Secondary. Not available for use; within 100km radius of Charing
+								Cross, London (51°30’30’’N,00°07’4’’W).
+							</td>
+							<td>Not allocated</td>
+							<td>40 W (16 dBW) ERP</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>70 cm</td>
+							<td>432 to 435 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>400 W (26 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>70 cm</td>
+							<td>435 to 438 MHz</td>
+							<td>Secondary</td>
+							<td>Secondary</td>
+							<td>400 W (26 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>70 cm</td>
+							<td>438 to 440 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>400 W (26 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>23 cm</td>
+							<td>1240 to 1260 MHz</td>
+							<td>Secondary</td>
+							<td>Secondary</td>
+							<td>100 W (20 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>13 cm</td>
+							<td>2300 to 2310 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>10 W (10 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>9 cm</td>
+							<td>3300 to 3400 MHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>1 W (0 dBW)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>3 cm</td>
+							<td>10.0 to 10.5 GHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>100 mW (20 dBm)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>1 cm</td>
+							<td>24.0 to 24.25 GHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>10 mW (10 dBm)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>1 mm</td>
+							<td>76 to 77 GHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>1 mW (0 dBm)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>1 mm</td>
+							<td>77 to 81 GHz</td>
+							<td>Secondary</td>
+							<td>Not allocated</td>
+							<td>1 mW (0 dBm)</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 
-    <h3>Full Licence</h3>
-    <table class="table table-bordered table-hover table-striped">
-        <thead>
-        <tr>
-            <th>Band</th>
-            <th>Band Range (MHz)</th>
-            <th>Power Limit</th>
-            <th>Allowed Modes</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>160m</td>
-            <td>1.8 - 2.0</td>
-            <td>400W</td>
-            <td>SSB, CW, FM, Digital</td>
-        </tr>
-        <tr>
-            <td>80m</td>
-            <td>3.5 - 3.8</td>
-            <td>400W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>60m</td>
-            <td>5.275 - 5.450</td>
-            <td>400W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>40m</td>
-            <td>7.0 - 7.2</td>
-            <td>400W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>20m</td>
-            <td>14.070 - 14.350</td>
-            <td>400W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>10m</td>
-            <td>28.0 - 29.7</td>
-            <td>400W</td>
-            <td>SSB, CW, Digital</td>
-        </tr>
-        <tr>
-            <td>2m</td>
-            <td>144.0 - 146.0</td>
-            <td>400W</td>
-            <td>SSB, CW, FM, Digital</td>
-        </tr>
-        <tr>
-            <td>70cm</td>
-            <td>430.0 - 440.0</td>
-            <td>400W</td>
-            <td>SSB, CW, FM, Digital</td>
-        </tr>
-        </tbody>
-    </table>
-
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
 </html>

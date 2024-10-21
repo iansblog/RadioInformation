@@ -76,112 +76,437 @@
         </div>
     </nav>
 
-    <!-- Main content -->
-<div class="container my-4">
-    <h2 class="text-center">Digital Mode Frequencies and Tools</h2>
-    <table class="table table-bordered table-hover table-striped">
+
+<div class="container">
+    <h1>Digital Mode Frequencies and Tools</h1>
+    
+    <div class="filter-container">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="modeFilter" class="form-label">Filter by Mode:</label>
+                <select id="modeFilter" class="form-select">
+                    <option value="">All</option>
+                    <option value="Contestia">Contestia</option>
+                    <option value="FT4">FT4</option>
+                    <option value="FT8">FT8</option>
+                    <option value="JS8Call">JS8Call</option>
+                    <option value="JT65">JT65</option>
+                    <option value="MSK144">MSK144</option>
+                    <option value="Olivia">Olivia</option>
+                    <option value="Pactor">Pactor</option>
+                    <option value="RTTY">RTTY</option>
+                    <option value="SSTV">SSTV</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="bandFilter" class="form-label">Filter by Band:</label>
+                <select id="bandFilter" class="form-select">
+                    <option value="">All</option>
+                    <option value="80mt">80mt</option>
+                    <option value="40mt">40mt</option>
+                    <option value="20mt">20mt</option>
+                    <option value="15mt">15mt</option>
+                    <option value="10mt">10mt</option>
+                    <option value="6mt">6mt</option>
+                    <option value="2mt">2mt</option>
+                    <option value="70cm">70cm</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-striped" id="frequencyTable">
         <thead>
-        <tr>
-            <th>Mode</th>
-            <th>Frequency (MHz)</th>
-            <th>Common Software</th>
-            <th>Modulation Type</th>
-            <th>Bandwidth (kHz)</th>
-            <th>Typical Usage</th>
-        </tr>
+            <tr>
+                <th>Mode</th>
+                <th>Band</th>
+                <th>Frequency (MHz)</th>
+                <th>Common Software</th>
+                <th>Modulation Type</th>
+                <th>Bandwidth (kHz)</th>
+                <th>Typical Usage</th>
+            </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>FT8</td>
-            <td>14.074 MHz</td>
-            <td><a href="https://physics.princeton.edu/pulsar/k1jt/wsjtx.html" target="_blank">WSJT-X</a></td>
-            <td>8-FSK</td>
-            <td>0.05 kHz</td>
-            <td>Weak signal, DXing</td>
-        </tr>
-        <tr>
-            <td>PSK31</td>
-            <td>14.070 MHz</td>
-            <td><a href="http://www.w1hkj.com/" target="_blank">FLDIGI</a></td>
-            <td>BPSK</td>
-            <td>0.03125 kHz</td>
-            <td>Low-power QSOs</td>
-        </tr>
-        <tr>
-            <td>RTTY</td>
-            <td>14.080 MHz</td>
-            <td><a href="http://mmhamsoft.amateur-radio.ca/mmtty/" target="_blank">MMTTY</a></td>
-            <td>FSK</td>
-            <td>0.2 kHz</td>
-            <td>Contesting, DXing</td>
-        </tr>
-        <tr>
-            <td>JS8Call</td>
-            <td>14.078 MHz</td>
-            <td><a href="https://js8call.com/" target="_blank">JS8Call</a></td>
-            <td>FSK</td>
-            <td>0.05 kHz</td>
-            <td>Text-based messaging</td>
-        </tr>
-        <tr>
-            <td>Olivia</td>
-            <td>14.105 MHz</td>
-            <td><a href="http://www.w1hkj.com/" target="_blank">FLDIGI</a></td>
-            <td>MFSK</td>
-            <td>0.5 kHz</td>
-            <td>Weak signal, reliable data transmission</td>
-        </tr>
-        <tr>
-            <td>Pactor</td>
-            <td>14.103 MHz</td>
-            <td><a href="https://www.scs-ptc.com/en/pactor.html" target="_blank">Pactor Software</a></td>
-            <td>PSK</td>
-            <td>0.5 kHz</td>
-            <td>Data, messaging, email</td>
-        </tr>
-        <tr>
-            <td>JT65</td>
-            <td>14.076 MHz</td>
-            <td><a href="https://physics.princeton.edu/pulsar/k1jt/wsjtx.html" target="_blank">WSJT-X</a></td>
-            <td>MFSK</td>
-            <td>0.18 kHz</td>
-            <td>Weak signal, moonbounce</td>
-        </tr>
-        <tr>
-            <td>MSK144</td>
-            <td>50.260 MHz</td>
-            <td><a href="https://physics.princeton.edu/pulsar/k1jt/wsjtx.html" target="_blank">WSJT-X</a></td>
-            <td>MSK</td>
-            <td>0.5 kHz</td>
-            <td>Meteor scatter communication</td>
-        </tr>
-        <tr>
-            <td>Contestia</td>
-            <td>14.125 MHz</td>
-            <td><a href="http://www.w1hkj.com/" target="_blank">FLDIGI</a></td>
-            <td>MFSK</td>
-            <td>0.5 kHz</td>
-            <td>Weak signal, digital contesting</td>
-        </tr>
-        <tr>
-            <td>WSPR</td>
-            <td>14.0956 MHz</td>
-            <td><a href="https://physics.princeton.edu/pulsar/k1jt/wsjtx.html" target="_blank">WSJT-X</a></td>
-            <td>FSK</td>
-            <td>0.006 kHz</td>
-            <td>Weak signal propagation beacons</td>
-        </tr>
-        <tr>
-            <td>SSTV</td>
-            <td>14.230 MHz</td>
-            <td><a href="http://hamsoft.ca/pages/mmsstv.php" target="_blank">MMSSTV</a></td>
-            <td>FM</td>
-            <td>3 kHz</td>
-            <td>Slow-scan television</td>
-        </tr>
+            <tr>
+                <td>Contestia</td>
+                <td>80mt</td>
+                <td>3.625 MHz</td>
+                <td>FLDIGI</td>
+                <td>MFSK</td>
+                <td>0.5 kHz</td>
+                <td>Weak signal, digital contesting</td>
+            </tr>
+            <tr>
+                <td>Contestia</td>
+                <td>40mt</td>
+                <td>7.125 MHz</td>
+                <td>FLDIGI</td>
+                <td>MFSK</td>
+                <td>0.5 kHz</td>
+                <td>Weak signal, digital contesting</td>
+            </tr>
+            <tr>
+                <td>Contestia</td>
+                <td>20mt</td>
+                <td>14.125 MHz</td>
+                <td>FLDIGI</td>
+                <td>MFSK</td>
+                <td>0.5 kHz</td>
+                <td>Weak signal, digital contesting</td>
+            </tr>
+            <tr>
+                <td>FT4</td>
+                <td>80mt</td>
+                <td>3.590 MHz</td>
+                <td>WSJT-X</td>
+                <td>4-FSK</td>
+                <td>0.1 kHz</td>
+                <td>Quick contacts, emergency communication</td>
+            </tr>
+            <tr>
+                <td>FT4</td>
+                <td>40mt</td>
+                <td>7.040 MHz</td>
+                <td>WSJT-X</td>
+                <td>4-FSK</td>
+                <td>0.1 kHz</td>
+                <td>Quick contacts, emergency communication</td>
+            </tr>
+            <tr>
+                <td>FT4</td>
+                <td>20mt</td>
+                <td>14.040 MHz</td>
+                <td>WSJT-X</td>
+                <td>4-FSK</td>
+                <td>0.1 kHz</td>
+                <td>Quick contacts, emergency communication</td>
+            </tr>
+            <tr>
+                <td>FT4</td>
+                <td>15mt</td>
+                <td>21.040 MHz</td>
+                <td>WSJT-X</td>
+                <td>4-FSK</td>
+                <td>0.1 kHz</td>
+                <td>Quick contacts, emergency communication</td>
+            </tr>
+            <tr>
+                <td>FT4</td>
+                <td>10mt</td>
+                <td>28.040 MHz</td>
+                <td>WSJT-X</td>
+                <td>4-FSK</td>
+                <td>0.1 kHz</td>
+                <td>Quick contacts, emergency communication</td>
+            </tr>
+            <tr>
+                <td>FT4</td>
+                <td>6mt</td>
+                <td>50.320 MHz</td>
+                <td>WSJT-X</td>
+                <td>4-FSK</td>
+                <td>0.1 kHz</td>
+                <td>Quick contacts, emergency communication</td>
+            </tr>
+            <tr>
+                <td>FT4</td>
+                <td>2mt</td>
+                <td>144.120 MHz</td>
+                <td>WSJT-X</td>
+                <td>4-FSK</td>
+                <td>0.1 kHz</td>
+                <td>Quick contacts, emergency communication</td>
+            </tr>
+            <tr>
+                <td>FT4</td>
+                <td>70cm</td>
+                <td>432.120 MHz</td>
+                <td>WSJT-X</td>
+                <td>4-FSK</td>
+                <td>0.1 kHz</td>
+                <td>Quick contacts, emergency communication</td>
+            </tr>
+            <tr>
+                <td>FT8</td>
+                <td>80mt</td>
+                <td>3.573 MHz</td>
+                <td>WSJT-X</td>
+                <td>8-FSK</td>
+                <td>0.05 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>FT8</td>
+                <td>40mt</td>
+                <td>7.074 MHz</td>
+                <td>WSJT-X</td>
+                <td>8-FSK</td>
+                <td>0.05 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>FT8</td>
+                <td>20mt</td>
+                <td>14.074 MHz</td>
+                <td>WSJT-X</td>
+                <td>8-FSK</td>
+                <td>0.05 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>FT8</td>
+                <td>15mt</td>
+                <td>21.074 MHz</td>
+                <td>WSJT-X</td>
+                <td>8-FSK</td>
+                <td>0.05 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>FT8</td>
+                <td>10mt</td>
+                <td>28.074 MHz</td>
+                <td>WSJT-X</td>
+                <td>8-FSK</td>
+                <td>0.05 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>FT8</td>
+                <td>6mt</td>
+                <td>50.313 MHz</td>
+                <td>WSJT-X</td>
+                <td>8-FSK</td>
+                <td>0.05 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>FT8</td>
+                <td>2mt</td>
+                <td>144.174 MHz</td>
+                <td>WSJT-X</td>
+                <td>8-FSK</td>
+                <td>0.05 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>FT8</td>
+                <td>70cm</td>
+                <td>432.174 MHz</td>
+                <td>WSJT-X</td>
+                <td>8-FSK</td>
+                <td>0.05 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>JS8Call</td>
+                <td>80mt</td>
+                <td>3.578 MHz</td>
+                <td>JS8Call</td>
+                <td>FSK</td>
+                <td>0.05 kHz</td>
+                <td>Text-based messaging</td>
+            </tr>
+            <tr>
+                <td>JS8Call</td>
+                <td>40mt</td>
+                <td>7.078 MHz</td>
+                <td>JS8Call</td>
+                <td>FSK</td>
+                <td>0.05 kHz</td>
+                <td>Text-based messaging</td>
+            </tr>
+            <tr>
+                <td>JS8Call</td>
+                <td>20mt</td>
+                <td>14.078 MHz</td>
+                <td>JS8Call</td>
+                <td>FSK</td>
+                <td>0.05 kHz</td>
+                <td>Text-based messaging</td>
+            </tr>
+            <tr>
+                <td>JT65</td>
+                <td>80mt</td>
+                <td>3.576 MHz</td>
+                <td>WSJT-X</td>
+                <td>MFSK</td>
+                <td>0.1 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>JT65</td>
+                <td>40mt</td>
+                <td>7.076 MHz</td>
+                <td>WSJT-X</td>
+                <td>MFSK</td>
+                <td>0.1 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>JT65</td>
+                <td>20mt</td>
+                <td>14.076 MHz</td>
+                <td>WSJT-X</td>
+                <td>MFSK</td>
+                <td>0.1 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>JT65</td>
+                <td>15mt</td>
+                <td>21.076 MHz</td>
+                <td>WSJT-X</td>
+                <td>MFSK</td>
+                <td>0.1 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>JT65</td>
+                <td>10mt</td>
+                <td>28.076 MHz</td>
+                <td>WSJT-X</td>
+                <td>MFSK</td>
+                <td>0.1 kHz</td>
+                <td>Weak signal, DXing</td>
+            </tr>
+            <tr>
+                <td>MSK144</td>
+                <td>6mt</td>
+                <td>50.260 MHz</td>
+                <td>WSJT-X</td>
+                <td>MSK</td>
+                <td>0.5 kHz</td>
+                <td>Meteor scatter communication</td>
+            </tr>
+            <tr>
+                <td>Olivia</td>
+                <td>80mt</td>
+                <td>3.585 MHz</td>
+                <td>FLDIGI</td>
+                <td>MFSK</td>
+                <td>0.5 kHz</td>
+                <td>Weak signal, reliable data transmission</td>
+            </tr>
+            <tr>
+                <td>Olivia</td>
+                <td>40mt</td>
+                <td>7.105 MHz</td>
+                <td>FLDIGI</td>
+                <td>MFSK</td>
+                <td>0.5 kHz</td>
+                <td>Weak signal, reliable data transmission</td>
+            </tr>
+            <tr>
+                <td>Pactor</td>
+                <td>80mt</td>
+                <td>3.581 MHz</td>
+                <td>Pactor Software</td>
+                <td>PSK</td>
+                <td>0.5 kHz</td>
+                <td>Data, messaging, email</td>
+            </tr>
+            <tr>
+                <td>Pactor</td>
+                <td>40mt</td>
+                <td>7.081 MHz</td>
+                <td>Pactor Software</td>
+                <td>PSK</td>
+                <td>0.5 kHz</td>
+                <td>Data, messaging, email</td>
+            </tr>
+            <tr>
+                <td>RTTY</td>
+                <td>80mt</td>
+                <td>3.580 MHz</td>
+                <td>MMTTY</td>
+                <td>FSK</td>
+                <td>0.2 kHz</td>
+                <td>Contesting, DXing</td>
+            </tr>
+            <tr>
+                <td>RTTY</td>
+                <td>40mt</td>
+                <td>7.080 MHz</td>
+                <td>MMTTY</td>
+                <td>FSK</td>
+                <td>0.2 kHz</td>
+                <td>Contesting, DXing</td>
+            </tr>
+            <tr>
+                <td>RTTY</td>
+                <td>20mt</td>
+                <td>14.080 MHz</td>
+                <td>MMTTY</td>
+                <td>FSK</td>
+                <td>0.2 kHz</td>
+                <td>Contesting, DXing</td>
+            </tr>
+            <tr>
+                <td>RTTY</td>
+                <td>15mt</td>
+                <td>21.080 MHz</td>
+                <td>MMTTY</td>
+                <td>FSK</td>
+                <td>0.2 kHz</td>
+                <td>Contesting, DXing</td>
+            </tr>
+            <tr>
+                <td>RTTY</td>
+                <td>10mt</td>
+                <td>28.080 MHz</td>
+                <td>MMTTY</td>
+                <td>FSK</td>
+                <td>0.2 kHz</td>
+                <td>Contesting, DXing</td>
+            </tr>
+            <tr>
+                <td>SSTV</td>
+                <td>80mt</td>
+                <td>3.580 MHz</td>
+                <td>MMSSTV</td>
+                <td>FM</td>
+                <td>3 kHz</td>
+                <td>Slow-scan television</td>
+            </tr>
+            <tr>
+                <td>SSTV</td>
+                <td>40mt</td>
+                <td>7.070 MHz</td>
+                <td>MMSSTV</td>
+                <td>FM</td>
+                <td>3 kHz</td>
+                <td>Slow-scan television</td>
+            </tr>
+            <tr>
+                <td>SSTV</td>
+                <td>20mt</td>
+                <td>14.230 MHz</td>
+                <td>MMSSTV</td>
+                <td>FM</td>
+                <td>3 kHz</td>
+                <td>Slow-scan television</td>
+            </tr>
         </tbody>
     </table>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#modeFilter, #bandFilter').on('change', function() {
+            var modeValue = $('#modeFilter').val().toLowerCase();
+            var bandValue = $('#bandFilter').val().toLowerCase();
+            $('#frequencyTable tbody tr').filter(function() {
+                $(this).toggle(
+                    (modeValue === "" || $(this).find('td').eq(0).text().toLowerCase().indexOf(modeValue) > -1) &&
+                    (bandValue === "" || $(this).find('td').eq(1).text().toLowerCase().indexOf(bandValue) > -1)
+                );
+            });
+        });
+    });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
