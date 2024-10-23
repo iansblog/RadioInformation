@@ -1,9 +1,12 @@
+
 # Live Amateur Radio Information
 This project hosts a set of  Bootstrap page using Nginx in a Docker container.
 
 Band information for the UK coming from Ofcom. 
 
 https://www.ofcom.org.uk/siteassets/resources/documents/spectrum/emf/emf-amateur-licence-terms-and-conditions.pdf?v=368354
+
+To view this running please pop over to [amatureradio.26580.co.uk](https://amatureradio.26580.co.uk)
 
 ## Getting Started
 
