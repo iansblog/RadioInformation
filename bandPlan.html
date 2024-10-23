@@ -4,17 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Amateur Radio Information</title>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-			rel="stylesheet"
-		/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 		<style>
 			body {
-				background-color: #f4f7f9; /* Pale background color */
+				background-color: #f4f7f9;
 			}
 			.navbar-brand i {
 				margin-right: 8px;
@@ -88,10 +82,40 @@
 				</div>
 			</div>
 		</nav>
-
+		
 		<!-- Main content -->
 		<div class="container my-4">
 			<h2 class="text-center">UK Amateur Radio Band Plan</h2>
+
+			<!-- Band filter dropdown -->
+			<div class="container mt-4">
+				<label for="bandFilter" class="form-label">Filter by Band:</label>
+				<select id="bandFilter" class="form-select">
+					<option value="">Show All</option>
+					<option value="135 kHz">135 kHz</option>
+					<option value="472 kHz">472 kHz</option>
+					<option value="160 m">160 m</option>
+					<option value="80 m">80 m</option>
+					<option value="60 m">60 m</option>
+					<option value="40 m">40 m</option>
+					<option value="30 m">30 m</option>
+					<option value="20 m">20 m</option>
+					<option value="17 m">17 m</option>
+					<option value="15 m">15 m</option>
+					<option value="12 m">12 m</option>
+					<option value="10 m">10 m</option>
+					<option value="6 m">6 m</option>
+					<option value="4 m">4 m</option>
+					<option value="2 m">2 m</option>
+					<option value="70 cm">70 cm</option>
+					<option value="23 cm">23 cm</option>
+					<option value="13 cm">13 cm</option>
+					<option value="9 cm">9 cm</option>
+					<option value="3 cm">3 cm</option>
+					<option value="1 cm">1 cm</option>
+					<option value="1 mm">1 mm</option>
+				</select>
+			</div>
 
 			<div class="container mt-5">
 				<h2>Table A: Foundation Licence Parameters</h2>
@@ -106,9 +130,9 @@
 							<th>Modes</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody id="bandTableBody">
 						<tr>
-							<td>2200m</td>
+							<td>2200 m</td>
 							<td>135.7 to 137.8 kHz</td>
 							<td>
 								Secondary. Available on the basis of non-interference to other
@@ -119,7 +143,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>160m</td>
+							<td>160 m</td>
 							<td>1810 to 1830 kHz</td>
 							<td>
 								Primary. Available on the basis of non-interference to other
@@ -130,7 +154,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>160m</td>
+							<td>160 m</td>
 							<td>1830 to 1850 kHz</td>
 							<td>Primary</td>
 							<td>Not allocated</td>
@@ -138,7 +162,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>160m</td>
+							<td>160 m</td>
 							<td>1850 to 2000 kHz</td>
 							<td>
 								Secondary. Available on the basis of non-interference to other
@@ -149,7 +173,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>80m</td>
+							<td>80 m</td>
 							<td>3500 to 3800 kHz</td>
 							<td>Primary. Shared with other services.</td>
 							<td>Not allocated</td>
@@ -157,77 +181,57 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>40m</td>
+							<td>40 m</td>
 							<td>7000 to 7100 kHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
 							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>40m</td>
+							<td>40 m</td>
 							<td>7100 to 7200 kHz</td>
 							<td>Primary</td>
 							<td>Not allocated</td>
 							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>30m</td>
+							<td>30 m</td>
 							<td>10000 to 10150 kHz</td>
 							<td>Secondary</td>
 							<td>Not allocated</td>
 							<td>25 W (13.98 dBW)</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>20m</td>
+							<td>20 m</td>
 							<td>14000 to 14250 kHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
 							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>20m</td>
+							<td>20 m</td>
 							<td>14250 to 14350 kHz</td>
 							<td>Primary</td>
 							<td>Not allocated</td>
 							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>17m</td>
+							<td>17 m</td>
 							<td>18068 to 18168 kHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
@@ -235,7 +239,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>15m</td>
+							<td>15 m</td>
 							<td>21000 to 21450 kHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
@@ -243,7 +247,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>12m</td>
+							<td>12 m</td>
 							<td>24890 to 24990 kHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
@@ -251,21 +255,17 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>10m</td>
+							<td>10 m</td>
 							<td>28.0 to 29.7 MHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
 							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>6m</td>
+							<td>6 m</td>
 							<td>50 to 51 MHz</td>
 							<td>
 								Primary. Available on the basis of non-interference to other
@@ -274,15 +274,11 @@
 							<td>Not allocated</td>
 							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>6m</td>
+							<td>6 m</td>
 							<td>51 to 52 MHz</td>
 							<td>
 								Secondary. Available on the basis of non-interference to other
@@ -291,15 +287,11 @@
 							<td>Not allocated</td>
 							<td>25 W (13.98 dBW)</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>4m</td>
+							<td>4 m</td>
 							<td>70.0 to 70.5 MHz</td>
 							<td>
 								Secondary. Available on the basis of non-interference to other
@@ -310,21 +302,17 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>2m</td>
+							<td>2 m</td>
 							<td>144 to 146 MHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
 							<td>25 W (13.98 dBW) / 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>70cm</td>
+							<td>70 cm</td>
 							<td>430 to 431 MHz</td>
 							<td>Secondary</td>
 							<td>Not allocated</td>
@@ -343,7 +331,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>70cm</td>
+							<td>70 cm</td>
 							<td>432 to 435 MHz</td>
 							<td>Secondary</td>
 							<td>Not allocated</td>
@@ -373,7 +361,7 @@
 							<th>Modes</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody id="bandTableBody">
 						<tr>
 							<td>Low Frequency</td>
 							<td>135.7 to 137.8 kHz</td>
@@ -386,7 +374,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>160m</td>
+							<td>160 m</td>
 							<td>1810 to 1830 kHz</td>
 							<td>
 								Primary. Available on the basis of non-interference to other
@@ -397,7 +385,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>160m</td>
+							<td>160 m</td>
 							<td>1830 to 1850 kHz</td>
 							<td>Primary</td>
 							<td>Not allocated</td>
@@ -405,7 +393,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>160m</td>
+							<td>160 m</td>
 							<td>1850 to 2000 kHz</td>
 							<td>
 								Secondary. Available on the basis of non-interference to other
@@ -416,91 +404,67 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>80m</td>
+							<td>80 m</td>
 							<td>3500 to 3800 kHz</td>
 							<td>Primary. Shared with other Services.</td>
 							<td>Not allocated</td>
 							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>40m</td>
+							<td>40 m</td>
 							<td>7000 to 7100 kHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
 							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>40m</td>
+							<td>40 m</td>
 							<td>7100 to 7200 kHz</td>
 							<td>Primary</td>
 							<td>Not allocated</td>
 							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>30m</td>
+							<td>30 m</td>
 							<td>10000 to 10150 kHz</td>
 							<td>Secondary</td>
 							<td>Not allocated</td>
 							<td>100 W (20 dBW)</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>20m</td>
+							<td>20 m</td>
 							<td>14000 to 14250 kHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
 							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>20m</td>
+							<td>20 m</td>
 							<td>14250 to 14350 kHz</td>
 							<td>Primary</td>
 							<td>Not allocated</td>
 							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>17m</td>
+							<td>17 m</td>
 							<td>18068 to 18168 kHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
@@ -508,7 +472,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>15m</td>
+							<td>15 m</td>
 							<td>21000 to 21450 kHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
@@ -516,7 +480,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>12m</td>
+							<td>12 m</td>
 							<td>24890 to 24990 kHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
@@ -524,21 +488,17 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>10m</td>
+							<td>10 m</td>
 							<td>28.0 to 29.7 MHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
 							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>6m</td>
+							<td>6 m</td>
 							<td>50 to 51 MHz</td>
 							<td>
 								Primary. Available on the basis of non-interference to other
@@ -547,15 +507,11 @@
 							<td>Not allocated</td>
 							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>6m</td>
+							<td>6 m</td>
 							<td>51 to 52 MHz</td>
 							<td>
 								Secondary. Available on the basis of non-interference to other
@@ -564,15 +520,11 @@
 							<td>Not allocated</td>
 							<td>100 W (20 dBW)</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>4m</td>
+							<td>4 m</td>
 							<td>70.0 to 70.5 MHz</td>
 							<td>
 								Secondary. Available on the basis of non-interference to other
@@ -583,21 +535,17 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>2m</td>
+							<td>2 m</td>
 							<td>144 to 146 MHz</td>
 							<td>Primary</td>
 							<td>Primary</td>
 							<td>100 W (20 dBW) 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="DigitalModeFrequenciesAndTools.html"
-									target="_DigitalModes"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
-							<td>70cm</td>
+							<td>70 cm</td>
 							<td>430 to 431 MHz</td>
 							<td>Secondary</td>
 							<td>Not allocated</td>
@@ -605,7 +553,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>70cm</td>
+							<td>70 cm</td>
 							<td>431 to 432 MHz</td>
 							<td>
 								Secondary. Not available for use within 100km radius of Charing
@@ -616,7 +564,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>70cm</td>
+							<td>70 cm</td>
 							<td>432 to 435 MHz</td>
 							<td>Secondary</td>
 							<td>Not allocated</td>
@@ -624,7 +572,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>70cm</td>
+							<td>70 cm</td>
 							<td>435 to 438 MHz</td>
 							<td>Secondary</td>
 							<td>Secondary</td>
@@ -632,7 +580,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>70cm</td>
+							<td>70 cm</td>
 							<td>438 to 440 MHz</td>
 							<td>Secondary</td>
 							<td>Not allocated</td>
@@ -640,7 +588,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>23cm</td>
+							<td>23 cm</td>
 							<td>1240 to 1260 MHz</td>
 							<td>Secondary</td>
 							<td>Not allocated</td>
@@ -648,7 +596,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>23cm</td>
+							<td>23 cm</td>
 							<td>1260 to 1270 MHz</td>
 							<td>Secondary</td>
 							<td>Secondary. Earth to space only</td>
@@ -656,7 +604,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>23cm</td>
+							<td>23 cm</td>
 							<td>1270 to 1325 MHz</td>
 							<td>Secondary</td>
 							<td>Not allocated</td>
@@ -664,7 +612,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>13cm</td>
+							<td>13 cm</td>
 							<td>2310 to 2350 MHz</td>
 							<td>Secondary</td>
 							<td>Not allocated</td>
@@ -672,7 +620,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>13cm</td>
+							<td>13 cm</td>
 							<td>2350 to 2400 MHz</td>
 							<td>Secondary. Primary for Earth to space.</td>
 							<td>Not allocated</td>
@@ -680,7 +628,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>9cm</td>
+							<td>9 cm</td>
 							<td>3400 to 3500 MHz</td>
 							<td>Secondary</td>
 							<td>Not allocated</td>
@@ -688,7 +636,7 @@
 							<td>-</td>
 						</tr>
 						<tr>
-							<td>5cm</td>
+							<td>5 cm</td>
 							<td>5650 to 5850 MHz</td>
 							<td>Secondary. Primary for Earth to space.</td>
 							<td>Not allocated</td>
@@ -718,7 +666,7 @@
 							<th>Modes</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody id="bandTableBody">
 						<tr>
 							<td>135 kHz</td>
 							<td>135.7 to 137.8 kHz</td>
@@ -827,11 +775,7 @@
 							<td>Not allocated</td>
 							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="_DigitalModes"
-									target="DigitalModeFrequenciesAndTools.html"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
@@ -906,11 +850,7 @@
 							<td>Primary</td>
 							<td>1000 W (30 dBW) 500 mW EIRP airborne</td>
 							<td>
-								<a
-									href="_DigitalModes"
-									target="DigitalModeFrequenciesAndTools.html"
-									>Digital</a
-								>
+-
 							</td>
 						</tr>
 						<tr>
@@ -1015,8 +955,26 @@
 					</tbody>
 				</table>
 			</div>
+
+
 		</div>
 
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			// Function to filter table rows based on selected band
+			document.getElementById("bandFilter").addEventListener("change", function () {
+				const selectedBand = this.value;
+				const rows = document.querySelectorAll("#bandTableBody tr");
+
+				rows.forEach(row => {
+					const bandCell = row.querySelector("td:first-child").textContent.trim();
+					
+					if (selectedBand === "" || bandCell === selectedBand) {
+						row.style.display = "";
+					} else {
+						row.style.display = "none";
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
