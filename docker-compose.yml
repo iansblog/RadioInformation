@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  amateurradioinformation:
+    image: neonsunset/amateurradioinformation:latest
+    container_name: amateurradioinformation
+    restart: always
+    ports:
+      - "80:80"
