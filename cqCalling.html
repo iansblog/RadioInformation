@@ -1,74 +1,187 @@
-<div class="container mt-5">
-    <h2>Amateur Radio CQ Calling Frequencies</h2>
-    <table class="table table-bordered table-striped">
-        <thead class="thead-light">
-            <tr>
-                <th>Band (MHz)</th>
-                <th>Frequency (MHz)</th>
-                <th>Typical Usage</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>160 Meter</td>
-                <td>1.850</td>
-                <td>General calling</td>
-            </tr>
-            <tr>
-                <td>80 Meter</td>
-                <td>3.600</td>
-                <td>General calling</td>
-            </tr>
-            <tr>
-                <td>40 Meter</td>
-                <td>7.150</td>
-                <td>General calling</td>
-            </tr>
-            <tr>
-                <td>30 Meter</td>
-                <td>10.140</td>
-                <td>General calling (limited use)</td>
-            </tr>
-            <tr>
-                <td>20 Meter</td>
-                <td>14.300</td>
-                <td>General calling</td>
-            </tr>
-            <tr>
-                <td>17 Meter</td>
-                <td>18.140</td>
-                <td>General calling</td>
-            </tr>
-            <tr>
-                <td>15 Meter</td>
-                <td>21.300</td>
-                <td>General calling</td>
-            </tr>
-            <tr>
-                <td>12 Meter</td>
-                <td>24.930</td>
-                <td>General calling</td>
-            </tr>
-            <tr>
-                <td>10 Meter</td>
-                <td>28.400</td>
-                <td>General calling</td>
-            </tr>
-            <tr>
-                <td>6 Meter</td>
-                <td>50.125</td>
-                <td>General calling</td>
-            </tr>
-            <tr>
-                <td>2 Meter</td>
-                <td>144.200</td>
-                <td>General calling</td>
-            </tr>
-            <tr>
-                <td>70 cm (430 MHz)</td>
-                <td>432.100</td>
-                <td>General calling</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amateur Radio Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f7f9; /* Pale background color */
+        }
+        .navbar-brand i {
+            margin-right: 8px;
+        }
+        .nav-link i {
+            margin-right: 5px;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 1px solid #eaeaea;
+            display: block;
+            width: 100%;
+            position: relative;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }        
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-broadcast-tower"></i> Amateur Radio Information
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="cqCalling.html">
+                            <i class="fas fa-microphone-alt"></i> CQ Calling
+                        </a>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="solarActivityAndHFPropagation.html">
+                            <i class="fas fa-sun"></i> Solar Activity & HF Propagation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="propagation.html">
+                            <i class="fas fa-wave-square"></i> Propagation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bandPlan.html">
+                            <i class="fas fa-signal"></i> Band Plan
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="antennaTuningGuide.html">
+                            <i class="fas fa-wifi"></i> Antenna Tuning Guide
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SDRApplications.html">
+                            <i class="fas fa-broadcast-tower"></i> SDR Applications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="EMFComplianceTable.html">
+                            <i class="fas fa-table"></i> EMF Compliance Table
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="DigitalVoiceModes.html">
+                            <i class="fas fa-voicemail"></i> Digital Voice Modes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="DigitalModeFrequenciesAndTools.html">
+                            <i class="fas fa-tools"></i> Digital Mode Frequencies & Tools
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+        <div class="container mt-5">
+            <h2>Amateur Radio CQ Calling Frequencies</h2>
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Band (MHz)</th>
+                        <th>Frequency (MHz)</th>
+                        <th>Typical Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>160 Meter</td>
+                        <td>1.850</td>
+                        <td>General calling</td>
+                    </tr>
+                    <tr>
+                        <td>80 Meter</td>
+                        <td>3.600</td>
+                        <td>General calling</td>
+                    </tr>
+                    <tr>
+                        <td>40 Meter</td>
+                        <td>7.150</td>
+                        <td>General calling</td>
+                    </tr>
+                    <tr>
+                        <td>30 Meter</td>
+                        <td>10.140</td>
+                        <td>General calling (limited use)</td>
+                    </tr>
+                    <tr>
+                        <td>20 Meter</td>
+                        <td>14.300</td>
+                        <td>General calling</td>
+                    </tr>
+                    <tr>
+                        <td>17 Meter</td>
+                        <td>18.140</td>
+                        <td>General calling</td>
+                    </tr>
+                    <tr>
+                        <td>15 Meter</td>
+                        <td>21.300</td>
+                        <td>General calling</td>
+                    </tr>
+                    <tr>
+                        <td>12 Meter</td>
+                        <td>24.930</td>
+                        <td>General calling</td>
+                    </tr>
+                    <tr>
+                        <td>10 Meter</td>
+                        <td>28.400</td>
+                        <td>General calling</td>
+                    </tr>
+                    <tr>
+                        <td>6 Meter</td>
+                        <td>50.125</td>
+                        <td>General calling</td>
+                    </tr>
+                    <tr>
+                        <td>2 Meter</td>
+                        <td>144.200</td>
+                        <td>General calling</td>
+                    </tr>
+                    <tr>
+                        <td>70 cm (430 MHz)</td>
+                        <td>432.100</td>
+                        <td>General calling</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    <footer>
+        <p>Any errors or omissions? Please reach out via <a href="https://www.qrz.com/db/M7IBW" target="_blank">QRZ: M7IBW</a>.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
